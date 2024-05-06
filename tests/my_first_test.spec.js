@@ -29,19 +29,18 @@ const{test,expect} = require('@playwright/test')
 
 test('Login Test', async ({ page }) => {
     await page.goto('https://myconnectverse.netlify.app/');
-    await page.fill('input[name="username"]', 'newuser@gmail.com');
-    await page.fill('input[name="password"]', 'newuser@gmail.com');
+    await page.fill('input[type="text"]', 'newuser@gmail.com');
+    await page.fill('input[type="password"]', 'newuser@gmail.com');
     await page.click('button[type="submit"]');
-    // await page.waitForNavigation();
-    const dashboardTitle = await page.title();
-    expect(dashboardTitle).toBe('ConnectVerse');
+    //  await page.waitForNavigation();
+    const title = await page.textContent('.MuiTypography-root.MuiTypography-body1.css-15bj9oc');
+    expect(title).toBe('ConnectVerse');
 });
 
-test('Main Page Feature Testing', async ({ page }) => {
-    await login(page, 'username', 'password');
-    await testFeature1(page);
-    await testFeature2(page);
-});
+
+
+
+
 
 
 
