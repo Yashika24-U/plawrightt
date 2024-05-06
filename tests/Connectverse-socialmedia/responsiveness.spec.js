@@ -39,7 +39,7 @@ test.use({
   ...devices['iPhone 11'],
 });
 
-test('test', async ({ page }) => {
+test('testiphone11', async ({ page }) => {
   await page.goto('https://myconnectverse.netlify.app/');
 });
 
@@ -48,7 +48,7 @@ test.use({
   ...devices['BlackBerry Z30'],
 });
 
-test('test', async ({ page }) => {
+test('testblackberry', async ({ page }) => {
   await page.goto('about:blank');
 });
 
@@ -58,7 +58,7 @@ test.use({
   ...devices['Desktop Chrome'],
 });
 
-test('test', async ({ page }) => {
+test('testdesktopchrome', async ({ page }) => {
   await page.goto('https://myconnectverse.netlify.app/');
 });
 
@@ -69,6 +69,6 @@ test.use({
   ...devices['iPad Pro 11'],
 });
 
-test('test', async ({ page }) => {
+test('testiPadpro11', async ({ page }) => {
   await page.goto('https://myconnectverse.netlify.app/');
 });
