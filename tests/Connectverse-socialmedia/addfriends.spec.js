@@ -1,71 +1,21 @@
-
 import { test, expect } from '@playwright/test';
-test('Friend Addition', async ({ page }) => {
-    await page.goto('https://myconnectverse.netlify.app/');
-    await page.getByLabel('Email').click();
-    await page.getByLabel('Email').fill('testuser3@gmail.com');
-    await page.getByLabel('Password').click();
-    await page.getByLabel('Password').fill('testuser3@gmail.com');
-    await page.getByText('LOGINDon\'t have an account ?').click();
-    await page.locator('div').filter({ hasText: /^Yashika ReddyChennai,TamilNaduGood Foood Good Life !!90$/ }).getByRole('button').first().click();
-    await page.locator('div:nth-child(2) > div:nth-child(3) > div').first().click();
-    await page.locator('div').filter({ hasText: /^Andria JoeKorea, CA😍😍40$/ }).getByRole('button').first().click();
-  });
 
-  test('Friendiconupdate', async ({ page }) => {
-    await page.goto('https://myconnectverse.netlify.app/');
-    await page.getByLabel('Email').click();
-    await page.getByLabel('Email').fill('testuser3@gmail.com');
-    await page.getByLabel('Password').click();
-    await page.getByLabel('Password').fill('testuser3@gmail.com');
-    await page.getByText('LOGINDon\'t have an account ?').click();
-    await page.locator('div').filter({ hasText: /^Yashika ReddyChennai,TamilNaduGood Foood Good Life !!90$/ }).getByRole('button').first().click();
-    await page.locator('div:nth-child(2) > div:nth-child(3) > div').first().click();
-    await page.locator('div').filter({ hasText: /^Andria JoeKorea, CA😍😍40$/ }).getByRole('button').first().click();
-  });
-
-  test('Friendlistverification', async ({ page }) => {
-    await page.goto('https://myconnectverse.netlify.app/');
-    await page.getByLabel('Email').click();
-    await page.getByLabel('Email').fill('testuser3@gmail.com');
-    await page.getByLabel('Password').click();
-    await page.getByLabel('Password').fill('testuser3@gmail.com');
-    await page.getByText('LOGINDon\'t have an account ?').click();
-    await page.locator('div').filter({ hasText: /^Yashika ReddyChennai,TamilNaduGood Foood Good Life !!90$/ }).getByRole('button').first().click();
-    await page.locator('div:nth-child(2) > div:nth-child(3) > div').first().click();
-    await page.locator('div').filter({ hasText: /^Andria JoeKorea, CA😍😍40$/ }).getByRole('button').first().click();
-  });
-
-  test('curruserfriendcountverification', async ({ page }) => {
-    await page.goto('https://myconnectverse.netlify.app/');
-    await page.getByLabel('Email').click();
-    await page.getByLabel('Email').fill('testuser3@gmail.com');
-    await page.getByLabel('Password').click();
-    await page.getByLabel('Password').fill('testuser3@gmail.com');
-    await page.getByText('LOGINDon\'t have an account ?').click();
-    await page.locator('div').filter({ hasText: /^Yashika ReddyChennai,TamilNaduGood Foood Good Life !!90$/ }).getByRole('button').first().click();
-    await page.locator('div:nth-child(2) > div:nth-child(3) > div').first().click();
-    await page.locator('div').filter({ hasText: /^Andria JoeKorea, CA😍😍40$/ }).getByRole('button').first().click();
-  });
-
-
-
-test('Viewfriendprofile', async ({ page }) => {
-  await page.locator('body').click();
+test('add friend and check count', async ({ page }) => {
+  await page.goto('https://myconnectverse.netlify.app/');
   await page.getByLabel('Email').click();
-  await page.getByLabel('Email').fill('testuser3@gmail.com');
+  await page.getByLabel('Email').fill('yashikareddy@gmail.com');
   await page.getByLabel('Password').click();
-  await page.getByLabel('Password').fill('testuser3@gmail.com');
-  await page.getByLabel('Password').press('Enter');
-  await page.locator('div').filter({ hasText: /^Yashika ReddyChennai,TamilNaduGood Foood Good Life !!90$/ }).getByRole('heading').click();
+  await page.getByLabel('Password').fill('yashikareddy@gmail.com');
+  await page.getByRole('button', { name: 'LOGIN' }).click();
+  await page.locator('div').filter({ hasText: /^Steve RalphNew York, CAHey , there !70$/ }).getByRole('button').first().click();
+  await page.locator('div').filter({ hasText: /^Andria JoeKorea, CA😍😍50$/ }).getByRole('button').first().click();
+  await page.locator('div').filter({ hasText: /^Janu DoeUtah, CAHey all :\)50$/ }).getByRole('button').first().click();
+  await page.locator('div').filter({ hasText: /^Yashika ReddyChennai,TamilNadu Every bite tells a flavorful story! 🍔✨30$/ }).getByRole('button').first().click();
+  await page.locator('div:nth-child(8) > div > .MuiButtonBase-root').first().click();
+  await page.locator('div:nth-child(7) > div > .MuiButtonBase-root').first().click();
+  await page.locator('div:nth-child(11) > div > .MuiButtonBase-root').first().click();
+  await page.locator('div:nth-child(19) > div > .MuiButtonBase-root').first().click();
+  await page.locator('div:nth-child(18) > div > .MuiButtonBase-root').first().click();
+  await page.getByText('friends').click();
+  
 });
-
-test('friendprofilecountverification', async ({ page }) => {
-    await page.locator('body').click();
-    await page.getByLabel('Email').click();
-    await page.getByLabel('Email').fill('testuser3@gmail.com');
-    await page.getByLabel('Password').click();
-    await page.getByLabel('Password').fill('testuser3@gmail.com');
-    await page.getByLabel('Password').press('Enter');
-    await page.locator('div').filter({ hasText: /^Yashika ReddyChennai,TamilNaduGood Foood Good Life !!90$/ }).getByRole('heading').click();
-  });
